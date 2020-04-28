@@ -1,21 +1,41 @@
-# ... example
+# Timer example
 
-This is an example of ...
+This example shows how to use the `java.util.Timer` class.
 
 
 ## Maven instructions
 
-To print the project dependencies:
+To compile and package the source code:
 
 ```
-mvn dependency:tree
+mvn install
 ```
 
-To compile the source code:
+To run using exec plugin:
 
 ```
-mvn compile
+mvn exec:java
 ```
+
+NOTE: using the exec plugin to run the code uses the same process as Maven, and
+  On Windows:
+    target\appassembler\bin\timer
+  On Linux:
+    ./target/appassembler/bin/timer the code behavior is modified by Maven's own threads and settings.
+To test this program without interference from Maven, use the appassembler plugin.
+
+To run using appassembler plugin on Linux:
+
+```
+./target/appassembler/bin/timer
+```
+
+On Windows:
+
+```
+target\appassembler\bin\timer
+```
+
 
 ## To configure the Maven project in Eclipse
 
