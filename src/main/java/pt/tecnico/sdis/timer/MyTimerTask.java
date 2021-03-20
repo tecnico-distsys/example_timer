@@ -6,7 +6,7 @@ public class MyTimerTask extends TimerTask {
 
     Object argument;
 
-    public MyTimerTask(Object argument) {
+    public MyTimerTask(final Object argument) {
         this.argument = argument;
     }
 
@@ -15,7 +15,7 @@ public class MyTimerTask extends TimerTask {
         System.out.println(this.getClass() + " running...");
 
         // read argument (any object)
-        Integer arg = (Integer) this.argument;
+        final Integer arg = (Integer) this.argument;
 
         // Do something...
         System.out.println(arg);
