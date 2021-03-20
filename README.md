@@ -17,11 +17,7 @@ To run using exec plugin:
 mvn exec:java
 ```
 
-NOTE: using the exec plugin to run the code uses the same process as Maven, and
-  On Windows:
-    target\appassembler\bin\timer
-  On Linux:
-    ./target/appassembler/bin/timer the code behavior is modified by Maven's own threads and settings.
+NOTE: using the exec plugin to run the code uses the same process as Maven, and the code behavior is modified by Maven's own threads and settings.
 To test this program without interference from Maven, use the appassembler plugin.
 
 To run using appassembler plugin on Linux:
